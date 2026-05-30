@@ -1,0 +1,324 @@
+:root{
+--primary:#74226C;
+--secondary:#C63FA6;
+--gold:#D4A373;
+--light:#FAF8F8;
+--dark:#222222;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--light);
+color:var(--dark);
+overflow-x:hidden;
+}
+
+h1,h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+section{
+padding:120px 10%;
+}
+
+.header{
+position:fixed;
+top:0;
+width:100%;
+height:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(20px);
+z-index:999;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:var(--primary);
+}
+
+.nav{
+display:flex;
+gap:35px;
+}
+
+.nav a{
+text-decoration:none;
+color:var(--dark);
+font-weight:500;
+}
+
+.quote-btn{
+padding:14px 26px;
+border-radius:50px;
+background:var(--primary);
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+background:url('../assets/hero.jpg') center center/cover;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+color:white;
+max-width:900px;
+}
+
+.hero-tag{
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:14px;
+}
+
+.hero h1{
+font-size:90px;
+line-height:1;
+margin:20px 0;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.hero-actions{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.btn-primary{
+background:var(--gold);
+padding:16px 32px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+}
+
+.btn-outline{
+border:1px solid white;
+padding:16px 32px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+}
+
+.section-title{
+text-align:center;
+font-size:60px;
+margin-bottom:60px;
+}
+
+.intro{
+text-align:center;
+}
+
+.intro h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.intro p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.collection-grid,
+.feature-grid,
+.personal-grid,
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.collection-card,
+.feature,
+.personal-grid div,
+.services div{
+background:white;
+padding:40px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+transition:.4s;
+}
+
+.collection-card:hover,
+.feature:hover{
+transform:translateY(-10px);
+}
+
+.feature{
+text-align:center;
+}
+
+.feature svg{
+width:50px;
+height:50px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.feature h3{
+margin-bottom:15px;
+}
+
+.services div,
+.personal-grid div{
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+font-weight:600;
+}
+
+.services svg,
+.personal-grid svg{
+width:40px;
+height:40px;
+color:var(--primary);
+}
+
+.clients{
+background:white;
+}
+
+.client-slider{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+font-weight:600;
+}
+
+.contact form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+textarea{
+padding:18px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+}
+
+textarea{
+height:180px;
+resize:none;
+}
+
+button{
+padding:18px;
+border:none;
+background:var(--primary);
+color:white;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+}
+
+footer{
+background:var(--primary);
+padding:60px 10%;
+color:white;
+}
+
+.footer-content{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-item{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.whatsapp-btn{
+position:fixed;
+right:25px;
+bottom:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+.whatsapp-btn svg{
+width:28px;
+height:28px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:56px;
+}
+
+.nav{
+display:none;
+}
+
+.section-title,
+.intro h2{
+font-size:42px;
+}
+
+.hero-actions{
+flex-direction:column;
+}
+
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(80px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
